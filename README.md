@@ -6,7 +6,7 @@
 
 Mesh networking · off-grid power · rugged field hardware · tactical situational awareness
 
-[midwestmeshlab.net](https://midwestmeshlab.net) — our public community lab
+[midwestmeshlab.net](https://midwestmeshlab.net) — our public community lab · [nordicdevelopment.org](https://nordicdevelopment.org) — shop
 
 </div>
 
@@ -112,9 +112,26 @@ overlanding where knowing everyone's position matters; any team-based
 field operation where "where is everyone, right now" is the actual
 problem being solved.
 
-This is where our device-provisioning and launcher tooling lives — getting
-the phones and radios that run ATAK in the field configured and ready to
-go, not just the software on a shelf.
+### DART & EUD — the hardware that runs it
+
+Two terms we use constantly, because we build the hardware behind them:
+
+- **EUD (End User Device)** — the phone or tablet a person actually carries.
+  We sell these pre-configured and ready to go: rugged Android hardware
+  (Samsung Xcover, Google Pixel, rugged tablets) loaded with ATAK,
+  Meshtastic, and the other field apps, so it's a working situational
+  awareness terminal out of the box instead of a bare phone.
+- **DART (Decentralized Austere Radio Transceiver)** — our own rugged LoRa
+  radio. It's a purpose-built Meshtastic node in a sealed aluminum
+  enclosure: 915MHz LoRa, GPS, Bluetooth, AES-256 encrypted channels, and
+  preconfigured ATAK/Meshtastic integration, built to survive field
+  conditions a hobbyist dev board wasn't designed for. Pair a DART with an
+  EUD and a team has encrypted position and text comms with zero cell or
+  internet dependency.
+
+Our `device-provisioning` and `rugged-radio-production` repos are the
+tooling behind building and configuring these — DARTs and EUDs before they
+ship. The hardware itself is sold at [nordicdevelopment.org](https://nordicdevelopment.org).
 
 ## Featured project — Midwest Mesh Lab
 
@@ -142,13 +159,13 @@ NomadNet / MeshChat setup on Windows, macOS, Linux, or a Raspberry Pi.
 | [Meshtastic-Solar-Node-Build-List](https://github.com/NordicDevelopment-org/Meshtastic-Solar-Node-Build-List) | Hardware list for a full off-grid, solar-powered Meshtastic node |
 | OffGridCommsStack | Several comms tools (Meshtastic, Reticulum, and more) integrated onto a variety of hardware |
 | meshchat-docker | Containerized deployment of Reticulum MeshChat |
-| rugged-radio-production | Build and production system for our Rugged Radio mesh devices |
+| rugged-radio-production | Build and production system for DART, our rugged Meshtastic LoRa radio |
 | Meshnet | Dashboard for keeping an eye on mesh and comms activity |
 
 **ATAK & field devices**
 | Project | What it is |
 |---|---|
-| device-provisioning | Provisioning tool for setting up the EUDs (end-user devices), DARTs, and other field hardware that run ATAK |
+| device-provisioning | Provisioning tool for setting up EUDs and DARTs before they ship |
 | Gotak-Launcher-APK | Custom ATAK launch-screen APK |
 
 **Off-grid power & hardware**
@@ -175,7 +192,8 @@ us, you already have access to what you need.
 ## Get in touch
 
 Questions about a project here, or want to talk mesh networking? Open an
-issue on the relevant repo, or start at [midwestmeshlab.net](https://midwestmeshlab.net).
+issue on the relevant repo, start at [midwestmeshlab.net](https://midwestmeshlab.net),
+or find our hardware at [nordicdevelopment.org](https://nordicdevelopment.org).
 
 <div align="center">
 
