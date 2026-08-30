@@ -12,6 +12,36 @@ Mesh networking · off-grid power · rugged field hardware · tactical situation
 
 <br>
 
+## Why we exist
+
+Communications fail exactly when they matter most. In disaster response,
+remote fieldwork, and tactical operations, cell towers go down, traditional
+radio networks are proprietary and expensive, and satellite is costly and
+slow to stand up. Nordic Development Industries started to build a better
+answer: affordable, decentralized, rugged mesh radios that don't depend on
+a cell tower, a subscription, or anyone else's infrastructure staying up —
+plus the field devices to actually use them.
+
+The company grew out of an earlier, broader idea for a community
+preparedness effort before narrowing specifically to communications — the
+piece that was both the sharpest gap and the most buildable. What started
+as a self-funded, hands-on project testing Meshtastic gear in Minnesota
+became real hardware: DART, sold and carried by real teams.
+
+**Midwest Mesh Lab** is the other half of that same effort, kept
+deliberately open. It's where we run the workshops, publish the build
+guides, and grow the regional mesh community instead of keeping everything
+behind a product page — teaching people to build their own nodes rather
+than just selling them one. Some of the same work has gone toward less
+everyday customers too: fire departments building redundancy into their
+own comms, and mission-driven nonprofits — like The GOAT Initiative, which
+works against child trafficking — whose radios have to work when nothing
+else does.
+
+That's the throughline: build the thing that keeps working when everything
+else has failed, and make it something a community can learn, build, and
+own — not just buy.
+
 ## What we build
 
 We design and build the systems that keep people connected, aware of each
@@ -112,26 +142,28 @@ overlanding where knowing everyone's position matters; any team-based
 field operation where "where is everyone, right now" is the actual
 problem being solved.
 
-### DART & EUD — the hardware that runs it
+### DART & EUD — the hardware and the interface to it
 
-Two terms we use constantly, because we build the hardware behind them:
+Two terms we use constantly:
 
-- **EUD (End User Device)** — the phone or tablet a person actually carries.
-  We sell these pre-configured and ready to go: rugged Android hardware
-  (Samsung Xcover, Google Pixel, rugged tablets) loaded with ATAK,
-  Meshtastic, and the other field apps, so it's a working situational
-  awareness terminal out of the box instead of a bare phone.
 - **DART (Decentralized Austere Radio Transceiver)** — our own rugged LoRa
-  radio. It's a purpose-built Meshtastic node in a sealed aluminum
-  enclosure: 915MHz LoRa, GPS, Bluetooth, AES-256 encrypted channels, and
-  preconfigured ATAK/Meshtastic integration, built to survive field
-  conditions a hobbyist dev board wasn't designed for. Pair a DART with an
-  EUD and a team has encrypted position and text comms with zero cell or
-  internet dependency.
+  radio, and the hardware we actually build. It's a purpose-built
+  Meshtastic node in a sealed aluminum enclosure: 915MHz LoRa, GPS,
+  Bluetooth, AES-256 encrypted channels, and preconfigured ATAK/Meshtastic
+  integration, built to survive field conditions a hobbyist dev board
+  wasn't designed for.
+- **EUD (End User Device)** — the phone or tablet a person actually
+  carries. We don't build the phone; we source rugged Android hardware
+  (Samsung Xcover, Google Pixel, rugged tablets) and set up the apps and
+  firmware — ATAK, Meshtastic, and the rest — that turn it into the UI
+  and connection point for a DART radio.
+
+Pair a DART with a configured EUD and a team has encrypted position and
+text comms with zero cell or internet dependency.
 
 Our `device-provisioning` and `rugged-radio-production` repos are the
-tooling behind building and configuring these — DARTs and EUDs before they
-ship. The hardware itself is sold at [nordicdevelopment.org](https://nordicdevelopment.org).
+tooling behind this — building DART radios and configuring EUDs before
+they ship. Sold at [nordicdevelopment.org](https://nordicdevelopment.org).
 
 ## Featured project — Midwest Mesh Lab
 
