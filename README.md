@@ -1,96 +1,68 @@
-# Mesh Networking Setup Documentation
+<div align="center">
 
-Welcome to the comprehensive setup guide for building your own mesh networking system using Reticulum, NomadNet, and MeshChat.
+# Nordic Development Industries
 
-## Quick Links
+**Communications infrastructure for when the grid isn't there.**
 
-**[📖 Complete Setup Guide](SETUP-GUIDE.md)** - Start here for step-by-step instructions
+Mesh networking · off-grid power · rugged field hardware
 
-## What's Included
+[midwestmeshlab.net](https://midwestmeshlab.net) — our public community lab
 
-This repository contains complete setup documentation for:
+</div>
 
-- **Reticulum**: Cryptography-based networking stack for resilient, distributed communication
-- **NomadNet**: Decentralized communication and file-sharing application
-- **MeshChat**: Chat application for mesh networks
-- **Complete platform support**: Windows, macOS, Linux, and Raspberry Pi
+<br>
 
-## Features
+## What we build
 
-✅ **Hardware requirements** - Know what you need before you start
-✅ **Software requirements** - All dependencies clearly listed
-✅ **Platform-specific instructions** - Separate guides for each OS
-✅ **Copy-paste commands** - Easy to follow, no guesswork
-✅ **SSH setup for Raspberry Pi** - Complete headless setup guide
-✅ **Security best practices** - Keep your mesh network secure
-✅ **Troubleshooting section** - Solutions to common problems
+We design and build the systems that keep people connected and powered when
+normal infrastructure isn't an option — disaster response, remote fieldwork,
+overlanding, or just a neighborhood that wants a radio network the internet
+can't take down.
 
-## Quick Start
+**Mesh communications**
+Off-grid networking stacks built on [Reticulum](https://github.com/markqvist/Reticulum),
+[NomadNet](https://github.com/markqvist/NomadNet), MeshChat, and Meshtastic —
+from single nodes to multi-hop networks that route around dead infrastructure.
 
-### Windows
-```powershell
-pip install rns nomadnet meshchat
-```
+**Off-grid power**
+Solar and battery systems sized for field radio gear: node builds, power
+configurators, and the cut lists and BOMs to actually build them.
 
-### macOS
-```bash
-pip3 install rns nomadnet meshchat
-```
+**Rugged & field-ready hardware**
+Radios and devices built to survive being used outdoors, provisioned and
+production-tested rather than assembled once and hoped for.
 
-### Linux / Raspberry Pi
-```bash
-pip3 install rns nomadnet meshchat
-```
+## Featured project — Midwest Mesh Lab
 
-**Note**: See the [complete setup guide](SETUP-GUIDE.md) for prerequisites, system-specific setup, and configuration.
+[**Midwest Mesh Lab**](https://midwestmeshlab.net) ([source](https://github.com/NordicDevelopment-org/Midwest-Meshlab-site))
+is our open community hub for off-grid mesh networking, Raspberry Pi builds,
+and open hardware across the Midwest. It's where the region's Meshtastic and
+mesh-radio community trades builds, node maps, and troubleshooting notes —
+and it runs on a "no invented content" policy: nothing gets published there
+until it's real. We hold ourselves to the same standard here.
 
-## System Requirements
+## Public projects
 
-### Minimum
-- Any modern computer or Raspberry Pi 3B+
-- 1GB RAM (2GB+ recommended)
-- 2GB free storage
-- Internet connection for setup
+| Project | What it is |
+|---|---|
+| [Midwest-Meshlab-site](https://github.com/NordicDevelopment-org/Midwest-Meshlab-site) | Source for [midwestmeshlab.net](https://midwestmeshlab.net) |
+| [Meshtastic-Solar-Node-Build-List](https://github.com/NordicDevelopment-org/Meshtastic-Solar-Node-Build-List) | Hardware list for building an off-grid, solar-powered mesh radio node |
+| [Mesh Networking Setup Guide](SETUP-GUIDE.md) | Step-by-step Reticulum / NomadNet / MeshChat setup for Windows, macOS, Linux, and Raspberry Pi |
 
-### Recommended Hardware
-- RNode or LoRa radio module for actual mesh networking
-- Raspberry Pi 4 for dedicated nodes
-- External antenna for extended range
+Most of what we build for production and client work lives in private repos —
+if you're working with us, you already have access.
 
-## Documentation Structure
+## Stack
 
-```
-├── README.md                 # This file - overview and quick start
-└── SETUP-GUIDE.md           # Complete setup guide with all details
-```
+`Python` · `Reticulum` · `Meshtastic` · `LoRa` · `Raspberry Pi` · `JavaScript` · `Docker`
 
-## What You'll Learn
+## Get in touch
 
-1. **Hardware Selection** - Choose the right equipment for your needs
-2. **Software Installation** - Install Python, pip, and all mesh networking tools
-3. **Platform Setup** - Detailed instructions for Windows, macOS, Linux, and Raspberry Pi
-4. **SSH Configuration** - Secure remote access to your Raspberry Pi
-5. **Security Hardening** - Best practices for keeping your system secure
-6. **Troubleshooting** - Solve common issues quickly
+Questions about a project here, or want to talk mesh networking? Open an
+issue on the relevant repo, or start at [midwestmeshlab.net](https://midwestmeshlab.net).
 
-## Support
+<div align="center">
 
-For issues with this documentation:
-- Open an issue in this repository
+<sub>Built for the field, not the demo.</sub>
 
-For issues with the software:
-- **Reticulum**: [github.com/markqvist/Reticulum](https://github.com/markqvist/Reticulum)
-- **NomadNet**: [github.com/markqvist/NomadNet](https://github.com/markqvist/NomadNet)
-- **MeshChat**: Check the project repository
-
-## Contributing
-
-Improvements to this documentation are welcome! If you find errors or have suggestions, please open an issue or submit a pull request.
-
-## License
-
-This documentation is released into the public domain under CC0. Use it freely for any purpose.
-
----
-
-**Ready to get started?** Head over to the **[Complete Setup Guide](SETUP-GUIDE.md)** and begin building your mesh network today!
+</div>
