@@ -14,33 +14,35 @@ Mesh networking · off-grid power · rugged field hardware · tactical situation
 
 ## Why we exist
 
-Communications fail exactly when they matter most. In disaster response,
-remote fieldwork, and tactical operations, cell towers go down, traditional
-radio networks are proprietary and expensive, and satellite is costly and
-slow to stand up. Nordic Development Industries started to build a better
-answer: affordable, decentralized, rugged mesh radios that don't depend on
-a cell tower, a subscription, or anyone else's infrastructure staying up —
-plus the field devices to actually use them.
+In September 2024, Hurricane Helene tore through the Southeast and
+severed more than 1,700 miles of fiber optic cable, knocked out over half
+the cell sites in Buncombe County, North Carolina, and left 5.9 million
+customers without power across ten states. In a lot of those communities,
+amateur radio was the only thing that still worked — for days, it was the
+difference between coordinating a rescue and being cut off entirely.
 
-The company grew out of an earlier, broader idea for a community
-preparedness effort before narrowing specifically to communications — the
-piece that was both the sharpest gap and the most buildable. What started
-as a self-funded, hands-on project testing Meshtastic gear in Minnesota
-became real hardware: DART, sold and carried by real teams.
+That was the gap: modern disaster response was still depending on
+infrastructure that disasters routinely destroy, and there wasn't an
+affordable, decentralized alternative built for regular people and small
+teams to actually own and run themselves. **Midwest Mesh Lab** started
+within days of Helene as a hands-on effort to test and learn Meshtastic
+gear in Minnesota. **Nordic Development Industries** followed shortly
+after to turn that testing into real hardware — what became DART.
 
-**Midwest Mesh Lab** is the other half of that same effort, kept
-deliberately open. It's where we run the workshops, publish the build
-guides, and grow the regional mesh community instead of keeping everything
-behind a product page — teaching people to build their own nodes rather
-than just selling them one. Some of the same work has gone toward less
-everyday customers too: fire departments building redundancy into their
-own comms, and mission-driven nonprofits — like The GOAT Initiative, which
-works against child trafficking — whose radios have to work when nothing
-else does.
+Midwest Mesh Lab has stayed the open half of that effort: workshops,
+build guides, and a regional mesh community, kept deliberately public
+instead of behind a product page — teaching people to build their own
+nodes rather than just selling them one. NDI is the other half: engineering
+and building DART and the tooling around it as a real, sold product. Some
+of that work has gone toward less everyday customers too — fire
+departments building redundancy into their own comms, and mission-driven
+nonprofits like The GOAT Initiative, which works against child
+trafficking — whose radios have to work when nothing else does.
 
-That's the throughline: build the thing that keeps working when everything
-else has failed, and make it something a community can learn, build, and
-own — not just buy.
+That's the throughline: Helene showed the gap, and we've been building
+the thing that fills it ever since — comms that keep working when
+everything else has failed, and that a community can learn, build, and
+own, not just buy.
 
 ## What we build
 
