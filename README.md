@@ -6,7 +6,7 @@
 
 Mesh networking · off-grid power · rugged field hardware · tactical situational awareness
 
-[midwestmeshlab.net](https://midwestmeshlab.net) — our public community lab · [nordicdevelopment.org](https://nordicdevelopment.org) — shop
+[midwestmeshlab.net](https://midwestmeshlab.net) (our public community lab) · [nordicdevelopment.org](https://nordicdevelopment.org) (shop)
 
 </div>
 
@@ -14,178 +14,187 @@ Mesh networking · off-grid power · rugged field hardware · tactical situation
 
 ## Why we exist
 
-In September 2024, Hurricane Helene tore through the Southeast and
-severed more than 1,700 miles of fiber optic cable, knocked out over half
-the cell sites in Buncombe County, North Carolina, and left 5.9 million
-customers without power across ten states. In a lot of those communities,
-amateur radio was the only thing that still worked — for days, it was the
+In September 2024, Hurricane Helene tore through the Southeast. It severed
+more than 1,700 miles of fiber optic cable, knocked out over half the cell
+sites in Buncombe County, North Carolina, and left 5.9 million customers
+without power across ten states. In a lot of those communities, amateur
+radio was the only thing that still worked. For days, it was the
 difference between coordinating a rescue and being cut off entirely.
 
-That was the gap: modern disaster response was still depending on
+That was the gap. Modern disaster response was still depending on
 infrastructure that disasters routinely destroy, and there wasn't an
-affordable, decentralized alternative built for regular people and small
-teams to actually own and run themselves. **Midwest Mesh Lab** started
-within days of Helene as a hands-on effort to test and learn Meshtastic
-gear in Minnesota. **Nordic Development Industries** followed shortly
-after to turn that testing into real hardware — what became DART.
+affordable, decentralized alternative that regular people and small teams
+could actually own and run themselves. **Midwest Mesh Lab** started within
+days of Helene as a hands-on effort to test and learn Meshtastic gear in
+Minnesota. **Nordic Development Industries** followed shortly after to
+turn that testing into real hardware: what became DART.
 
-Midwest Mesh Lab has stayed the open half of that effort: workshops,
-build guides, and a regional mesh community, kept deliberately public
-instead of behind a product page — teaching people to build their own
-nodes rather than just selling them one. NDI is the other half: engineering
-and building DART and the tooling around it as a real, sold product. Some
-of that work has gone toward less everyday customers too — fire
-departments building redundancy into their own comms, and mission-driven
-nonprofits like The GOAT Initiative, which works against child
-trafficking — whose radios have to work when nothing else does.
+Midwest Mesh Lab is still the open side of that effort: workshops, build
+guides, and a regional mesh community, kept public instead of behind a
+product page, teaching people to build their own nodes instead of just
+selling them one. NDI builds and sells DART itself, plus the tooling
+around producing and provisioning it. Some of that work has gone to less
+everyday customers too: fire departments adding redundancy to their own
+comms, and mission-driven nonprofits like The GOAT Initiative, which works
+against child trafficking, whose radios have to work when nothing else
+does.
 
-That's the throughline: Helene showed the gap, and we've been building
-the thing that fills it ever since — comms that keep working when
-everything else has failed, and that a community can learn, build, and
-own, not just buy.
+Helene showed the gap. We've been building the thing that fills it since.
 
 ## What we build
 
-We design and build the systems that keep people connected, aware of each
-other's location, and powered when normal infrastructure isn't an option —
-disaster response, remote fieldwork, search and rescue, overlanding, or a
-neighborhood that wants a radio network the internet can't take down. In
-practice that means two things: **mesh radios that carry a message across
-miles with no towers**, and **ATAK, the map that shows a team where
-everyone is** once that message arrives.
+Nordic Development Industries is a hardware company. We design and build
+DART, a rugged mesh radio, and we configure the field devices that pair
+with it. We don't write the mesh networking or mapping software itself;
+that's built and maintained by the open-source projects below, and we
+lean on it rather than reinvent it. What we add is hardware that survives
+the field, and the setup work to make that hardware actually usable out
+of the box.
 
 ## Mesh networking, explained
 
-A quick primer, since the terms get thrown around a lot:
+A quick primer, since the terms get thrown around a lot.
 
-- **Mesh network** — devices ("nodes") relay messages for each other instead
-  of depending on one tower or router. No single node has to reach the
-  destination directly; the message hops node to node until it gets there.
-- **Node** — any radio, phone, or computer taking part in the mesh.
-- **Hop / relay** — one node passing a message on to the next. More hops
-  means the mesh can cover far more ground than any one radio could alone.
-- **LoRa** ("Long Range") — a low-power radio technology that trades
+- **Mesh network.** Devices ("nodes") relay messages for each other
+  instead of depending on one tower or router. No single node has to
+  reach the destination directly; the message hops node to node until it
+  gets there.
+- **Node.** Any radio, phone, or computer taking part in the mesh.
+- **Hop / relay.** One node passing a message on to the next. More hops
+  means the mesh can cover far more ground than any one radio could
+  alone.
+- **LoRa** ("Long Range"). A low-power radio technology that trades
   bandwidth for range: often a mile or more between nodes, tens of miles
   with a good antenna and line of sight.
-- **Off-grid** — works with no cell towers, no Wi-Fi router, no internet.
+- **Off-grid.** Works with no cell towers, no Wi-Fi router, no internet.
   That's the point of everything below.
 
 ### Meshtastic
 
 The project most of our mesh work is built around. Meshtastic is free,
 open-source firmware for cheap LoRa radios (ESP32/nRF52 boards like the
-T-Beam, Heltec, or RAK) that turns them into mesh nodes out of the box —
-no license, no subscription, no cell signal required. Pair a node with your
-phone over Bluetooth and you get text messaging, GPS position sharing, and
-basic sensor telemetry across the whole mesh, with each node extending the
-range of every other node.
+T-Beam, Heltec, or RAK) that turns them into mesh nodes out of the box: no
+license, no subscription, no cell signal required. Pair a node with your
+phone over Bluetooth and you get text messaging, GPS position sharing,
+and basic sensor telemetry across the whole mesh, with each node
+extending the range of every other node. Meshtastic is built and
+maintained by its own open-source community; we build hardware that runs
+it, we didn't write it.
 
-**Use cases:** group comms on a hike or hunt where there's no cell signal;
-keeping a convoy or work crew in contact off-road; a neighborhood or
-community mesh that still works when the power and cell towers go down;
-event and race-day coordination over a wide area; livestock or remote
-equipment monitoring on a property with no connectivity.
+**Use cases:** group comms on a hike or hunt where there's no cell
+signal, keeping a convoy or work crew in contact off-road, a neighborhood
+or community mesh that still works when the power and cell towers go
+down, event and race-day coordination over a wide area, livestock or
+remote equipment monitoring on a property with no connectivity.
 
 ### MeshCore
 
 A newer, alternative LoRa mesh firmware, built around dedicated repeater
 and "room server" roles rather than every node doing everything. It aims
 for more efficient store-and-forward routing on the same class of cheap
-LoRa hardware Meshtastic runs on. We track it because the mesh radio space
-moves fast, and the right firmware depends on the network you're actually
-building — a handful of hikers versus a fixed, permanent repeater network
-are different problems.
+LoRa hardware Meshtastic runs on. We track it because the mesh radio
+space moves fast, and the right firmware depends on the network you're
+actually building; a handful of hikers and a fixed, permanent repeater
+network are different problems. Like Meshtastic, MeshCore is developed
+and maintained by its own open-source project, separate from us.
 
 ### Reticulum, NomadNet & MeshChat
 
-**Reticulum (RNS)** is not a radio protocol — it's an encrypted networking
-stack that doesn't care what it's running over. The same Reticulum network
-can span LoRa, packet radio, Wi-Fi, plain internet, or a serial cable,
-automatically routing around whichever paths are actually up. It's the
-layer you build applications on top of when you need resilient,
+**Reticulum (RNS)** is not a radio protocol. It's an encrypted networking
+stack that doesn't care what it's running over. The same Reticulum
+network can span LoRa, packet radio, Wi-Fi, plain internet, or a serial
+cable, automatically routing around whichever paths are actually up. It's
+the layer you build applications on top of when you need resilient,
 end-to-end encrypted comms and don't want to be locked into one radio.
+Reticulum and NomadNet were created by Mark Qvist.
 
-- **NomadNet** — a distributed, forum-and-mail-style application built on
-  Reticulum: nodes host pages, message boards, and file shares that anyone
-  else on the network can browse, even with no internet behind it.
-- **MeshChat** — a more familiar chat-app experience on top of Reticulum,
-  with a web interface for messaging, voice calls, and file sharing between
-  nodes.
+- **NomadNet.** A distributed, forum-and-mail-style application built on
+  Reticulum: nodes host pages, message boards, and file shares that
+  anyone else on the network can browse, even with no internet behind
+  it.
+- **MeshChat.** A more familiar chat-app experience on top of Reticulum,
+  with a web interface for messaging, voice calls, and file sharing
+  between nodes. This is Reticulum MeshChat, built by Liam Cottle.
 
 **Use cases:** secure off-grid messaging that survives losing internet
-entirely; bridging mismatched hardware (a LoRa node talking to a laptop
+entirely, bridging mismatched hardware (a LoRa node talking to a laptop
 over Wi-Fi, talking to another site over the internet) into one resilient
-network; building a custom off-grid application without writing your own
+network, running a custom off-grid application without writing your own
 networking layer from scratch.
 
 We keep a full walkthrough for standing up Reticulum, NomadNet, and
 MeshChat yourself in **[SETUP-GUIDE.md](SETUP-GUIDE.md)**.
 
-## ATAK — tactical situational awareness
+## ATAK: tactical situational awareness
 
-**ATAK (Android Team Awareness Kit)** is the other half of what we build.
-Where Meshtastic and Reticulum get a message across distance, ATAK is the
-shared map that message shows up on. Originally developed for the military
-and now released in a civilian version (CivTAK/ATAK-CIV), ATAK runs on a
+**ATAK (Android Team Awareness Kit)** is the software side of what a DART
+radio connects to. Where Meshtastic and Reticulum get a message across
+distance, ATAK is the shared map that message shows up on. It runs on a
 phone or tablet and gives a team a live, shared picture: everyone's
 position, markers for points of interest or hazards, drawn routes, chat,
-and file sharing — all overlaid on offline maps that work with zero
-connectivity.
+and file sharing, all overlaid on offline maps that work with zero
+connectivity. ATAK was originally developed for the U.S. military; the
+civilian release (CivTAK / ATAK-CIV) is maintained by the TAK Product
+Center. We didn't build it. We build the radio hardware and configure the
+devices that run it.
 
-The real power of ATAK shows up when it's paired with mesh radio: a
-Meshtastic node feeding position and message data into ATAK means a team
-knows where everyone is and can talk to each other with no cell network
-and no internet, anywhere the mesh reaches.
+Paired with mesh radio, a Meshtastic node feeding position and message
+data into ATAK means a team knows where everyone is and can talk to each
+other with no cell network and no internet, anywhere the mesh reaches.
 
 **Use cases:** search and rescue teams tracking who has covered what
-ground; wildland fire crews maintaining shared awareness of fire lines and
-personnel; event security and venue operations; off-grid group travel and
-overlanding where knowing everyone's position matters; any team-based
-field operation where "where is everyone, right now" is the actual
-problem being solved.
+ground, wildland fire crews maintaining shared awareness of fire lines
+and personnel, event security and venue operations, off-grid group
+travel and overlanding where knowing everyone's position matters, any
+team-based field operation where "where is everyone, right now" is the
+actual problem being solved.
 
-### DART & EUD — the hardware and the interface to it
+### DART & EUD: the hardware and the interface to it
 
-Two terms we use constantly:
+Two terms we use constantly.
 
-- **DART (Decentralized Austere Radio Transceiver)** — our own rugged LoRa
-  radio, and the hardware we actually build. It's a purpose-built
+- **DART (Decentralized Austere Radio Transceiver).** Our own rugged
+  LoRa radio, and the hardware we actually build. It's a purpose-built
   Meshtastic node in a sealed aluminum enclosure: 915MHz LoRa, GPS,
   Bluetooth, AES-256 encrypted channels, and preconfigured ATAK/Meshtastic
   integration, built to survive field conditions a hobbyist dev board
   wasn't designed for.
-- **EUD (End User Device)** — the phone or tablet a person actually
+- **EUD (End User Device).** The phone or tablet a person actually
   carries. We don't build the phone; we source rugged Android hardware
   (Samsung Xcover, Google Pixel, rugged tablets) and set up the apps and
-  firmware — ATAK, Meshtastic, and the rest — that turn it into the UI
-  and connection point for a DART radio.
+  firmware, ATAK, Meshtastic, and the rest, that turn it into the UI and
+  connection point for a DART radio.
 
 Pair a DART with a configured EUD and a team has encrypted position and
 text comms with zero cell or internet dependency.
 
-Our `device-provisioning` and `rugged-radio-production` repos are the
-tooling behind this — building DART radios and configuring EUDs before
+Our `device-provisioning` and `rugged-radio-production` repos hold the
+tooling behind this: building DART radios and configuring EUDs before
 they ship. Sold at [nordicdevelopment.org](https://nordicdevelopment.org).
 
-## Featured project — Midwest Mesh Lab
+## Featured project: Midwest Mesh Lab
 
 [**Midwest Mesh Lab**](https://midwestmeshlab.net) ([source](https://github.com/NordicDevelopment-org/Midwest-Meshlab-site))
 is our open community hub for off-grid mesh networking, Raspberry Pi
 builds, and open hardware across the Midwest. It's where the region's
 Meshtastic and mesh-radio community trades builds, node maps, and
-troubleshooting notes — and it runs on a "no invented content" policy:
+troubleshooting notes, and it runs on a "no invented content" policy:
 nothing gets published there until it's real. We hold ourselves to the
 same standard here.
 
 ## This repository
 
-This is our GitHub org profile — the page you're reading is what shows up
-when someone visits [github.com/NordicDevelopment-org](https://github.com/NordicDevelopment-org).
+This is our GitHub org profile, the page you're reading when you visit
+[github.com/NordicDevelopment-org](https://github.com/NordicDevelopment-org).
 Alongside this README, it also holds **[SETUP-GUIDE.md](SETUP-GUIDE.md)**,
 a complete, standalone walkthrough for building your own Reticulum /
 NomadNet / MeshChat setup on Windows, macOS, Linux, or a Raspberry Pi.
 
-## Projects we build
+## Repos in this org
+
+We're a hardware company first. The repos below are mostly support
+tooling for building and provisioning that hardware (configurators,
+production scripts, dashboards), not standalone software products.
 
 **Mesh communications**
 | Project | What it is |
@@ -207,21 +216,38 @@ NomadNet / MeshChat setup on Windows, macOS, Linux, or a Raspberry Pi.
 |---|---|
 | Offgrid-Power-Configurator | Configure an auxiliary off-grid power system and get pricing, a cutlist, and a components BOM |
 | Cutlist-Configurator | Configurator for wire size, color, length, terminal type, and terminal locations |
-| AustereEssentials | Curated, portable reference toolkit for a PACE plan — for when the internet isn't there |
+| AustereEssentials | Curated, portable reference toolkit for a PACE plan, for when the internet isn't there |
 
 **Community & lab**
 | Project | What it is |
 |---|---|
 | [Midwest-Meshlab-site](https://github.com/NordicDevelopment-org/Midwest-Meshlab-site) | Source for [midwestmeshlab.net](https://midwestmeshlab.net) |
 
-Most of the above are private, working repos rather than public releases —
+Most of the above are private, working repos rather than public releases;
 we build them for our own use and for direct client work. There's also
 internal tooling and experiments not listed here. If you're working with
 us, you already have access to what you need.
 
-## Stack
+## Software we build on
 
-`Python` · `Meshtastic` · `Reticulum` · `LoRa` · `ATAK` · `Raspberry Pi` · `JavaScript` · `Docker`
+We're not a software company, and we want to be clear about that. DART
+and our EUD builds only work because of open-source and civilian-release
+software that other people wrote and maintain:
+
+| Software | Credit |
+|---|---|
+| Meshtastic | The Meshtastic open-source project and its contributors |
+| MeshCore | The MeshCore open-source project |
+| Reticulum & NomadNet | Created by Mark Qvist |
+| Reticulum MeshChat | Created by Liam Cottle |
+| ATAK / CivTAK | Originally developed for the U.S. military; civilian release maintained by the TAK Product Center |
+
+If you build on any of these, go support the actual projects. Our
+[SETUP-GUIDE.md](SETUP-GUIDE.md) links to each one.
+
+## Hardware & tools
+
+`LoRa` · `Meshtastic` · `Reticulum` · `ATAK` · `Raspberry Pi` · `Docker`
 
 ## Get in touch
 
